@@ -1,0 +1,32 @@
+<div class="row">
+    @if (isLoader == true){
+        <div class="col-12">
+            <div class="spinner-border text-muted"></div>
+            <div class="spinner-border text-primary"></div>
+            <div class="spinner-border text-success"></div>
+            <div class="spinner-border text-info"></div>
+            <div class="spinner-border text-warning"></div>
+            <div class="spinner-border text-danger"></div>
+            <div class="spinner-border text-secondary"></div>
+            <div class="spinner-border text-dark"></div>
+            <div class="spinner-border text-light"></div>
+        </div>
+    } @else {
+        <div class="col-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Role name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let role of roleList; let srno = index">
+                        <td>{{srno+1}}</td>
+                        <td>{{role.role}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
